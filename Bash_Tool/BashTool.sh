@@ -21,7 +21,7 @@ options=(
     15 "ClamAV scan and the system and remove viruses"
     16 "Rankmirrors to Set the Fastest Download Server"
     17 "Initializing the keyring and Verifying the master keys"
-    18 "Refresh mirror list (Wget / https://www.archlinux.org/mirrorlist/)"
+    18 "Refresh mirror list (reflector)"
     19 "Exit :("
     )
 
@@ -131,18 +131,10 @@ do
             echo "Done!" ;;
         18)
             clear
-            echo "Refresh mirror list (Wget / https://www.archlinux.org/mirrorlist/)"
-            # https://bbs.archlinux.org/viewtopic.php?pid=1426576#p1426576
-            sudo mkdir -p $HOME/msh/mls
-            cd $HOME/msh/mls
-            wget -O - 'https://www.archlinux.org/mirrorlist/?country=DK&country=DE&country=NL&country=NO&country=RU&country=SE&country=CH&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on' > $HOME/msh/mls/gml.txt
-            sudo sed -i 's/^#Server/Server/' /home/msh/mls/gml.txt
-            sudo rankmirrors -n 5 /home/msh/mls/gml.txt > /home/msh/mls/rml
-            sudo cp rml rml-$(date +%Y%m%d-%I:%M:%S%p)
-            echo password | sudo -S cp /home/msh/mls/rml /etc/pacman.d/mirrorlist
-            cd $HOME/msh ;;
-            # clear ;;
-            # echo "Done!" ;;
+            echo "Refresh mirror list (reflector)"
+            reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist
+            clear
+            echo "Done!" ;;
         19)
             clear
             echo "Exit :("
