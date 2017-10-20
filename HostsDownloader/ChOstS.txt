@@ -13510,6 +13510,7 @@
 0.0.0.0 auth-account-service.com
 0.0.0.0 auth-bedachungen.de
 0.0.0.0 auth-credit-agricole-agence-net.com
+0.0.0.0 authedmine.com
 0.0.0.0 authenticate-account.co.uk
 0.0.0.0 authenticationmacid.com
 0.0.0.0 authenticationportal.weebly.com
@@ -18848,6 +18849,7 @@
 0.0.0.0 capitaltrustinvest.com
 0.0.0.0 capitolexpress.biz
 0.0.0.0 capku.com
+0.0.0.0 capodannoinversilia.com
 0.0.0.0 capone350.com
 0.0.0.0 cappuno.org.pe
 0.0.0.0 capshoreassetmanagement.com
@@ -22345,6 +22347,7 @@
 0.0.0.0 coin-hive.com
 0.0.0.0 coinhive.com
 0.0.0.0 coinhive-manager.com
+0.0.0.0 coinminerz.com
 0.0.0.0 coinnebula.com
 0.0.0.0 coinsden.com
 0.0.0.0 coinsforfree.online
@@ -51331,12 +51334,16 @@
 0.0.0.0 minecraftstar.tk
 0.0.0.0 minecrunch.co
 0.0.0.0 minegam.com
+0.0.0.0 minemonero.pro
 0.0.0.0 minemytraffic.com
+0.0.0.0 minercircle.com
+0.0.0.0 minerjet.com
 0.0.0.0 minero.pw
 0.0.0.0 miner.pr0gramm.com
 0.0.0.0 minervaadvisors.com
 0.0.0.0 minerva.healthcentral.com
 0.0.0.0 minerva.healthcentral.com
+0.0.0.0 minexmr.com
 0.0.0.0 ming-dun.com.tw
 0.0.0.0 mingxinjj.com
 0.0.0.0 mingxuanhl.com
@@ -52000,6 +52007,11 @@
 0.0.0.0 mondodeitrucchi.net
 0.0.0.0 moneco.com.pe
 0.0.0.0 monemvasianews.gr
+0.0.0.0 monero.crypto-pool.fr
+0.0.0.0 monerohash.com
+0.0.0.0 monero-miner.com
+0.0.0.0 moneroocean.stream
+0.0.0.0 moneropool.com
 0.0.0.0 monetate.net
 0.0.0.0 monetisetrk2.co.uk
 0.0.0.0 monetisetrk3.co.uk
@@ -60800,6 +60812,7 @@
 0.0.0.0 pool.euroads.no
 0.0.0.0 pool.euroads.no
 0.0.0.0 poollivetourhack.net
+0.0.0.0 poolmining.org
 0.0.0.0 pool-nrc.adhese.com
 0.0.0.0 pool-nrc.adhese.com
 0.0.0.0 pool.nrc.adhese.com
@@ -73158,6 +73171,7 @@
 0.0.0.0 support-unlock-applid.com
 0.0.0.0 support-update-data-verification.com
 0.0.0.0 support-verifynow.com
+0.0.0.0 supportxmr.com
 0.0.0.0 supporty7.regis-fanpageee-confirm.ga
 0.0.0.0 support-you.in.net
 0.0.0.0 suppourt12.confrim-fanpage111.gq
@@ -79446,6 +79460,7 @@
 0.0.0.0 us.v1.yimg.com
 0.0.0.0 us.w1.yimg.com
 0.0.0.0 us.x1.yimg.com
+0.0.0.0 usxmrpool.com
 0.0.0.0 us.y1.yimg.com
 0.0.0.0 us.z1.yimg.com
 0.0.0.0 uszyce.webd.pl
@@ -80072,6 +80087,7 @@
 0.0.0.0 ver.ovh
 0.0.0.0 verred.net
 0.0.0.0 versalstudio.by
+0.0.0.0 versiliaguide.com
 0.0.0.0 versionsupport.set2updatenowsafesystemset4now.info
 0.0.0.0 verssijockachch.blogspot.com
 0.0.0.0 versusqf.com.br
@@ -90522,7 +90538,11 @@
 0.0.0.0 xmniabhrfafptwx.pw
 0.0.0.0 x.mochiads.com
 0.0.0.0 xmoneymakers.com
+0.0.0.0 xmrminerpro.com
+0.0.0.0 xmr.nanopool.org
 0.0.0.0 xmronta.com
+0.0.0.0 xmrpool.eu
+0.0.0.0 xmr.prohash.net
 0.0.0.0 xmtkj.com
 0.0.0.0 xmufemba.cn
 0.0.0.0 xn--1-8sbcpb0bdm8k6a.xn--p1ai
