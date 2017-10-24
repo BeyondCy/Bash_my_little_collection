@@ -12,11 +12,11 @@ options=(
 )
 
 select option in "${options[@]}"; do
-    case "$REPLY" in 
-        1) 
+    case "$REPLY" in
+        1)
         sudo rm -rf ChOstS
-        mkdir -p ChOstS 
-        cd $HOME/ChOstS 
+        mkdir -p ChOstS
+        cd $HOME/ChOstS
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate http://winhelp2002.mvps.org/hosts.txt -O 1.txt
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate http://someonewhocares.org/hosts/hosts -O 2.txt
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/zant95/hMirror/master/data/fademind-add.dead/list.txt -O 3.txt
@@ -37,26 +37,27 @@ select option in "${options[@]}"; do
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/zant95/hMirror/master/data/fademind-add.dead/list.txt -O 18.txt
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/data/mvps.org/hosts -O 19.txt
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/data/yoyo.org/hosts -O 20.txt
-	wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/supriyo-biswas/hostsfiles/master/ads_tracking.txt -O 21.txt ;;
-        2) 
-        sudo cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt 13.txt 14.txt 15.txt 16.txt 17.txt 18.txt 19.txt 20.txt 21.txt > ChOstS.txt 
+	      wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/supriyo-biswas/hostsfiles/master/ads_tracking.txt -O 21.txt
+        wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/ZeroDot1/CoinBlockerLists/master/hosts_optional -O 22.txt ;;
+        2)
+        sudo cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt 13.txt 14.txt 15.txt 16.txt 17.txt 18.txt 19.txt 20.txt 21.txt 22.txt > ChOstS.txt 
         sleep 15 ;;
-        3) 
+        3)
         echo "Clean the hosts file"
         cd $HOME/ChOstS
         # Remove duplicate lines
         awk '!seen[$0]++' ChOstS.txt
-        # Replace lines 
+        # Replace lines
         cat ChOstS.txt | sed -e "s/127.0.0.1 /0.0.0.0 /" > ChOstSt.txt
-        # Sort 
+        # Sort
         sort -u ChOstSt.txt > ChOstS.txt
         # Remove all comments
         sed -i '/^\s*[@#]/ d' ChOstS.txt
         # Delete empty lines
-        sed '/^\s*$/d' ChOstS.txt 
+        sed '/^\s*$/d' ChOstS.txt
         clear ;;
-        4) 
-        exit 0 
+        4)
+        exit 0
         clear ;;
     esac
 done
