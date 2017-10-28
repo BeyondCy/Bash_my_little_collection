@@ -37,10 +37,11 @@ select option in "${options[@]}"; do
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/zant95/hMirror/master/data/fademind-add.dead/list.txt -O 18.txt
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/data/mvps.org/hosts -O 19.txt
         wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/data/yoyo.org/hosts -O 20.txt
-	      wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/supriyo-biswas/hostsfiles/master/ads_tracking.txt -O 21.txt
-        wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/ZeroDot1/CoinBlockerLists/master/hosts_optional -O 22.txt ;;
+	wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/supriyo-biswas/hostsfiles/master/ads_tracking.txt -O 21.txt
+        wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/ZeroDot1/CoinBlockerLists/master/hosts_optional -O 22.txt
+	wget --verbose --referer=https://github.com/ -t 20 --no-check-certificate https://raw.githubusercontent.com/notracking/hosts-blocklists/master/hostnames.txt -O 23.txt ;;
         2)
-        sudo cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt 13.txt 14.txt 15.txt 16.txt 17.txt 18.txt 19.txt 20.txt 21.txt 22.txt > ChOstS.txt 
+        sudo cat 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt 13.txt 14.txt 15.txt 16.txt 17.txt 18.txt 19.txt 20.txt 21.txt 22.txt 23.txt > ChOstS.txt 
         sleep 15 ;;
         3)
         echo "Clean the hosts file"
