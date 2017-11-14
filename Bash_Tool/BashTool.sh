@@ -19,7 +19,7 @@ options=(
     13 "NVIDIA Automatic configuration (nvidia-xconfig)"
     14 "ClamAV update the virus definitions"
     15 "ClamAV scan and the system and remove viruses"
-    16 "Rankmirrors to Set the Fastest Download Server"
+    16 "Rankmirrors to Set the Fastest Download Server (Wget HTTPS Only)"
     17 "Initializing the keyring and Verifying the master keys"
     18 "Refresh mirror list (reflector)"
     19 "Turn off the computer"
@@ -115,10 +115,13 @@ do
             sudo clamscan -r -v -a --remove / ;;
         16)
             clear
-            echo "Rankmirrors to Set the Fastest Download Server"
+            echo "Rankmirrors to Set the Fastest Download Server (Wget HTTPS Only)"
             cd /etc/pacman.d/
-            sudo cp mirrorlist mirrorlist.bak
-            rankmirrors -n 6 mirrorlist.bak | sudo tee mirrorlist
+            sudo rm -rf /etc/pacman.d/mirrorlist.bak
+            sudo rm -rf '/etc/pacman.d/index.html'
+            sudo wget --verbose --referer=https://archlinux.org/ -t 20 --no-check-certificate https://www.archlinux.org/mirrorlist/all/https/ -O mirrorlist.bak
+            sudo sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.bak
+            rankmirrors -n 20 mirrorlist.bak | sudo tee mirrorlist
             sudo pacman -Syy --force
             echo "Done!" ;;
         17)
@@ -134,8 +137,7 @@ do
         18)
             clear
             echo "Refresh mirror list (reflector)"
-            reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorlist
-            clear
+            reflector -l 20 -p https --sort rate --save /etc/pacman.d/mirrorlist
             echo "Done!" ;;
         19)
             clear
