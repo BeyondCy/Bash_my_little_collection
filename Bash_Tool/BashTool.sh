@@ -24,7 +24,10 @@ options=(
     18 "Refresh mirror list (reflector)"
     19 "Turn off the computer"
     20 "Restart the computer"
-    21 "Exit :("
+    21 "Optimizing Linux for Slow Computers"
+    22 "Change User Password"
+    23 "Edit /etc/resolv.conf file (Leafpad)"
+    24 "Exit :("
     )
 
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -92,8 +95,8 @@ do
         11)
             clear
             echo "About Bash Tool"
-            dialog --backtitle "Bash Tool, Bash Quick and easy! by ZeroDot1" --title 'About Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.0.3 \n (c) 2017 by ZeroDot1 \n
- Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n \n Last Update: 22.10.2017 18:36' 15 60
+            dialog --backtitle "Bash Tool, Bash Quick and easy! by ZeroDot1" --title 'About Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.0.7 \n (c) 2017 by ZeroDot1 \n
+ Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n \n Last Update: 19.11.2017 19:31' 15 60
             clear ;;
         12)
             clear
@@ -150,6 +153,30 @@ do
             reboot
             clear ;;
         21)
+            clear
+            echo "Optimizing Linux for Slow Computers"
+            sudo tee -a /etc/sysctl.d/99-sysctl.conf <<-EOF
+            vm.swappiness=1
+            vm.vfs_cache_pressure=50
+            vm.dirty_background_bytes=16777216
+            vm.dirty_bytes=50331648
+EOF
+            sudo sysctl -w vm.swappiness=1
+            sudo sysctl -w vm.vfs_cache_pressure=50
+            sudo sysctl -w vm.dirty_background_bytes=16777216
+            sudo sysctl -w vm.dirty_bytes=50331648
+            clear ;;
+        22)
+            clear
+            echo "Change User Password"
+            passwd
+            clear ;;
+        23)
+            clear
+            echo "Edit /etc/resolv.conf file (Leafpad)"
+            sudo leafpad  '/etc/resolv.conf'
+            clear ;;
+        24)
             clear
             echo "Exit :("
             exit 0
