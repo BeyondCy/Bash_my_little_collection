@@ -4,7 +4,7 @@ echo "sudo pacman -Syy --force dialog"
 cmd=(dialog --backtitle "Bash Tool, Bash Quick and easy! by ZeroDot1" --menu "Select options:" 22 76 16)
 
 options=(
-    1 "Sync Pacman Database"
+    1 "Sync Pacman Database (Pacman)"
     2 "Update the System (Pacman)"
     3 "Update the System (Pacaur)"
     4 "Update-Hosts Ad and Malwareblock"
@@ -38,7 +38,7 @@ do
         1)
             clear
             tput setaf 2
-            echo "Sync Pacman Database"
+            echo "Sync Pacman Database (Pacman)"
             sudo pacman -Syy --force
             echo "Done!" ;;
         2)
@@ -63,7 +63,7 @@ do
             clear
             tput setaf 2
             echo "Install Update-Hosts Ad and Malwareblock"
-            pacaur -Syy --force update-hosts
+            pacaur -Syy --force update-hosts-git
             echo "Done!" ;;
         6)
             clear
@@ -95,8 +95,8 @@ do
         11)
             clear
             echo "About Bash Tool"
-            dialog --backtitle "Bash Tool, Bash Quick and easy! by ZeroDot1" --title 'About Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.0.7 \n (c) 2017 by ZeroDot1 \n
- Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n \n Last Update: 19.11.2017 19:31' 15 60
+            dialog --backtitle "Bash Tool, Bash Quick and easy! by ZeroDot1" --title 'About Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.0.9 \n (c) 2017 by ZeroDot1 \n
+ Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n \n Last Update: 21.11.2017 14:41' 15 60
             clear ;;
         12)
             clear
@@ -109,7 +109,8 @@ do
         14)
             clear
             echo "ClamAV update the virus definitions"
-            sudo freshclam -d
+            sudo rm -rf '/var/lib/clamav/mirrors.dat'
+            sudo freshclam -v -d
             sudo freshclam
             echo "Done!" ;;
         15)
