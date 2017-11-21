@@ -4,16 +4,16 @@ ______________________________________________________________
 # AdGuard DNS (beta)
 
 # Default mode (ad & trackers blocking):
-176.103.130.130
-176.103.130.131
-2a00:5a60::ad1:0ff
-2a00:5a60::ad2:0ff
+nameserver 176.103.130.130
+nameserver 176.103.130.131
+nameserver 2a00:5a60::ad1:0ff
+nameserver 2a00:5a60::ad2:0ff
 
 # Family protection (default + blocking adult websites + enforcing safe search):
-176.103.130.132
-176.103.130.134
-2a00:5a60::bad1:0ff
-2a00:5a60::bad2:0ff
+nameserver 176.103.130.132
+nameserver 176.103.130.134
+nameserver 2a00:5a60::bad1:0ff
+nameserver 2a00:5a60::bad2:0ff
 
 # Yandex DNS
 
@@ -41,6 +41,51 @@ nameserver 91.239.100.100
 nameserver 89.233.43.71
 nameserver 2001:67c:28a4::
 nameserver 2a01:3a0:53:53::
+
+# Norton ConnectSafe DNS
+
+# Policy A — Security This policy blocks all sites hosting malware, phishing sites, and scam sites. To choose Policy A, use the following IP addresses as preferred and alternate DNS server addresses:
+nameserver 199.85.126.10
+nameserver 199.85.127.10
+
+# Policy B — Security + Pornography In addition to blocking unsafe sites, this policy also blocks access to sites that contain sexually explicit material. To choose Policy B, use the following IP addresses as preferred and alternate DNS server addresses:
+nameserver 199.85.126.20
+nameserver 199.85.127.20
+
+# Policy C — Security + Pornography + Non-Family Friendly This policy is ideal for families with young children. In addition to blocking unsafe sites and pornography sites, this policy also blocks access to sites that feature mature content, abortion, alcohol, crime, cults, drugs, gambling, hate, sexual orientation, suicide, tobacco, or violence. To choose Policy C, use the following IP addresses as preferred and alternate DNS server addresses
+nameserver 199.85.126.30
+nameserver 199.85.127.30
+
+# DNS Advantage
+# Reliability & Performance 1
+nameserver 156.154.70.1 
+nameserver 156.154.71.1	
+nameserver 2610:a1:1018::1 
+nameserver 2610:a1:1019::1
+
+# Reliability & Performance 2
+nameserver 156.154.70.5 
+nameserver 156.154.71.5
+nameserver 2610:a1:1018::5 
+nameserver 2610:a1:1019::5
+
+# Threat Protection Malware, Ransomware, Spyware & Phishing
+nameserver 156.154.70.2 
+nameserver 156.154.71.2	
+nameserver 2610:a1:1018::2 
+nameserver 2610:a1:1019::2
+
+# Family Secure As above + Gambling, Pornography, Violence & Hate/Discrimination
+nameserver 156.154.70.3 
+nameserver 156.154.71.3	
+nameserver 2610:a1:1018::3 
+nameserver 2610:a1:1019::3
+
+# Business Secure As above + Gaming, Adult, Drugs, Alcohol & Anonymous Proxies
+nameserver 156.154.70.4 
+nameserver 156.154.71.4	
+nameserver 2610:a1:1018::4 
+nameserver 2610:a1:1019::4
 
 # Comodo DNS
 
