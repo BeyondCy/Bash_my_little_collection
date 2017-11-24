@@ -27,7 +27,8 @@ options=(
     21 "Optimizing Linux for Slow Computers"
     22 "Change User Password"
     23 "Edit /etc/resolv.conf file (Leafpad)"
-    24 "Exit :("
+    24 "Install Pi-hole (curl)"
+    25 "Exit :("
     )
 
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -95,8 +96,8 @@ do
         11)
             clear
             echo "About Bash Tool"
-            dialog --backtitle "Bash Tool, Bash Quick and easy! by ZeroDot1" --title 'About Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.0.9 \n (c) 2017 by ZeroDot1 \n
- Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n \n Last Update: 21.11.2017 14:41' 15 60
+            dialog --backtitle "Bash Tool, Bash Quick and easy! by ZeroDot1" --title 'About Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.1.0 \n (c) 2017 by ZeroDot1 \n
+ Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n \n Last Update: 21.11.2017 20:54' 15 60
             clear ;;
         12)
             clear
@@ -178,6 +179,11 @@ EOF
             sudo leafpad  '/etc/resolv.conf'
             clear ;;
         24)
+            clear
+            echo "Install Pi-hole (curl)"
+            sudo curl -sSL https://install.pi-hole.net | bash
+            clear ;;
+        25)
             clear
             echo "Exit :("
             exit 0
