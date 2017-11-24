@@ -27,7 +27,7 @@ options=(
     21 "Optimizing Linux for Slow Computers"
     22 "Change User Password"
     23 "Edit /etc/resolv.conf file (Leafpad)"
-    24 "Install Pi-hole (curl)"
+    24 "Install Pi-hole (pacaur)"
     25 "Exit :("
     )
 
@@ -180,8 +180,9 @@ EOF
             clear ;;
         24)
             clear
-            echo "Install Pi-hole (curl)"
-            sudo curl -sSL https://install.pi-hole.net | bash
+            echo "Install Pi-hole (pacaur)"
+            # https://wiki.archlinux.org/index.php/Pi-hole
+            sudo pacaur -Syy --force pi-hole-standalone
             clear ;;
         25)
             clear
