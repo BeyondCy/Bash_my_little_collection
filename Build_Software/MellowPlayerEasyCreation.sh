@@ -19,8 +19,8 @@
 #-----------------------------------------------------------------------------
 # author: ZeroDot1 https://github.com/ZeroDot1 , Colin Duquesnoy https://github.com/ColinDuquesnoy
 # author website: https://goo.gl/ZuWQB2 , https://github.com/ColinDuquesnoy
-# version: 1.0
-# date time: 21.10.2017 17:43
+# version: 1.1
+# date time: 01.20.2018 16:03
 #-----------------------------------------------------------------------------
 clear
 echo -e "\033[36m""*******************************************************************"
@@ -38,7 +38,7 @@ select option in "${options[@]}"; do
     case "$REPLY" in 
         1) 
         echo "Install dependencies Arch Linux"
-        pacaur -Syy --force base-devel qt5-quickcontrols2 qt5-quickcontrols qt5-graphicaleffects qt5-webengine qt5-translations qt5-svg cmake git xorg-server-xvfb libnotify ;;
+        pacaur -Syy --force base-devel qt5-tools qt5-quickcontrols2 qt5-quickcontrols qt5-graphicaleffects qt5-webengine qt5-translations qt5-svg cmake git xorg-server-xvfb libnotify ;;
         2) 
         echo "Install dependencies Ubuntu 17.10"
         sudo apt-get install build-essential git cmake qtbase5-dev qtdeclarative5-dev qtwebengine5-dev qtquickcontrols2-5-dev qtpositioning5-dev qtbase5-private-dev qtdeclarative5-qtquick2-plugin qml-module-qtquick-* qml-module-qtwebengine libqt5svg5-dev qttools5-dev-tools qttranslations5-l10n libnotify-dev qml-module-qt-labs-platform qtdeclarative5-models-plugin qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel ;;
@@ -76,7 +76,7 @@ select option in "${options[@]}"; do
         echo 'If you find a bug while testing MellowPlayer, please report it.'
         echo 'https://github.com/ColinDuquesnoy/MellowPlayer/issues'
         sleep 2s
-        MellowPlayer-develop/MellowPlayer-develop/src/MellowPlayer --log-level 1 ;;
+        MellowPlayer-develop/MellowPlayer-develop/src/main/MellowPlayer --log-level 1 ;;
         4) 
         exit 0 
         clear ;;
