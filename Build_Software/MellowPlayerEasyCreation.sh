@@ -20,7 +20,7 @@
 # author: ZeroDot1 https://github.com/ZeroDot1 , Colin Duquesnoy https://github.com/ColinDuquesnoy
 # author website: https://goo.gl/ZuWQB2 , https://github.com/ColinDuquesnoy
 # version: 1.1
-# date time: 01.20.2018 16:03
+# date time: 20.01.2018 16:03
 #-----------------------------------------------------------------------------
 clear
 echo -e "\033[36m""*******************************************************************"
