@@ -28,7 +28,8 @@ options=(
     22 "User Password ändern"
     23 "Bearbeite die Datei /etc/resolv.conf mit (Leafpad)"
     24 "Pi-hole installieren (pacaur)"
-    25 "Bash Tool schließen :("
+    25 "Teamviewer Fernwartung starten"
+    26 "Bash Tool schließen :("
     )
 
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -96,8 +97,8 @@ do
         11)
             clear
             echo "Informationen über Bash Tool"
-            dialog --backtitle "Bash Tool, Bash Quick and easy! von ZeroDot1" --title 'Informationen über Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.1.x \n (c) 2018 by ZeroDot1 \n
- Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n Sprache: Deutsch \n Überstezt von: ZeroDot1 \n Last Update: 09.02.2018 19:54' 15 60
+            dialog --backtitle "Bash Tool, Bash Quick and easy! von ZeroDot1" --title 'Informationen über Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.2.x \n (c) 2018 by ZeroDot1 \n
+ Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n Sprache: Deutsch \n Überstezt von: ZeroDot1 \n Letztes Update: 10.02.2018 15:57' 15 60
             clear ;;
         12)
             clear
@@ -196,6 +197,13 @@ EOF
             sudo pacaur -Syy --force pi-hole-standalone
             clear ;;
         25)
+            clear
+            echo "Teamviewer Fernwartung starten"
+            echo "Mit Teamviewer ist es möglich ihnen aus der Ferne zu helfen wenn sie ein Problem haben."
+            teamviewer --daemon steart
+            /opt/teamviewer/tv_bin/script/teamviewer
+            clear ;;
+        26)
             clear
             echo "Bash Tool schließen :(, Danke das sie Bash Tool verwendet haben."
             exit 0
