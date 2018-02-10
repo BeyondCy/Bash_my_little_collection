@@ -200,7 +200,7 @@ EOF
             clear
             echo "Teamviewer Fernwartung starten"
             echo "Mit Teamviewer ist es möglich ihnen aus der Ferne zu helfen wenn sie ein Problem haben."
-            teamviewer --daemon steart
+            teamviewer --daemon start
             /opt/teamviewer/tv_bin/script/teamviewer
             clear ;;
         26)
