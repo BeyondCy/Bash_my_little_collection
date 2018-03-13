@@ -72,7 +72,6 @@ select option in "${options[@]}"; do
 	qbs-setup-qt /usr/bin/qmake-qt5 qt5
 	qbs-config defaultProfile qt5
         qbs build release
-        make
         tput setaf 2
         popd
         popd
