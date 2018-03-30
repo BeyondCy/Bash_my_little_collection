@@ -47,13 +47,13 @@ do
             clear
             tput setaf 2
             echo "Systemupdate mit Pacman (Pacman)"
-            sudo pacman -Syyu --force
+            sudo pacman -Syyu --force --noconfirm
             echo "Bitte starten sie den Computer neu damit die Änderungen wirksam werden." ;;
         3)
             clear
             tput setaf 2
             echo "Systemupdate mit Pacman (Pacaur)"
-            pacaur -Syyu --force
+            pacaur -Syyu --force --noedit --noconfirm
             echo "Bitte starten sie den Computer neu damit die Änderungen wirksam werden." ;;
         4)
             clear
@@ -65,19 +65,19 @@ do
             clear
             tput setaf 2
             echo "Installiere Update-Hosts Ad and Malwareblock"
-            pacaur -Syy --force update-hosts-git
+            pacaur -Syy --force update-hosts-git --noedit --noconfirm
             echo "Fertig!" ;;
         6)
             clear
             tput setaf 2
             echo "Pacmancache Leeren um Speicherplatz zu gewinnen"
-            sudo pacman -Scc
+            sudo pacman -Scc --noconfirm
             echo "Fertig!" ;;
         7)
             clear
             tput setaf 2
             echo "Optimiren der Pacmandatenbangeschwindigkeit"
-            sudo pacman-optimize && sync
+            sudo pacman-optimize && sync --noconfirm
             echo "Fertig!" ;;
         8)
             clear
@@ -97,8 +97,8 @@ do
         11)
             clear
             echo "Informationen über Bash Tool"
-            dialog --backtitle "Bash Tool, Bash Quick and easy! von ZeroDot1" --title 'Informationen über Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.2.x \n (c) 2018 by ZeroDot1 \n
- Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n Sprache: Deutsch \n Überstezt von: ZeroDot1 \n Letztes Update: 10.02.2018 15:57' 15 60
+            dialog --backtitle "Bash Tool, Bash Quick and easy! von ZeroDot1" --title 'Informationen über Bash Tool' --msgbox ' Bash Tool, Bash Quick and easy! \n Version 1.0.3.x \n (c) 2018 by ZeroDot1 \n
+ Homepage: https://galaxy-bytes.blogspot.de/ \n Github: https://github.com/ZeroDot1 \n Sprache: Deutsch \n Überstezt von: ZeroDot1 \n Letztes Update: 30.03.2018 21:41' 15 60
             clear ;;
         12)
             clear
@@ -194,12 +194,15 @@ EOF
             clear
             echo "Pi-hole installieren (pacaur)"
             # https://wiki.archlinux.org/index.php/Pi-hole
-            sudo pacaur -Syy --force pi-hole-standalone
+            sudo pacaur -Syy --force pi-hole-standalone --noedit --noconfirm
             clear ;;
         25)
             clear
             echo "Teamviewer Fernwartung starten"
             echo "Mit Teamviewer ist es möglich ihnen aus der Ferne zu helfen wenn sie ein Problem haben."
+	    echo "systemctl enable teamviewerd"
+	    echo "systemctl start teamviewerd"
+	    echo "sudo teamviewer --daemon enable"
             teamviewer --daemon start
             /opt/teamviewer/tv_bin/script/teamviewer
             clear ;;
